@@ -46,6 +46,9 @@ const addNewTransaction = async (req, res, next) => {
       throw new CreateError(404, 'Not found');
     }
 
+    console.log('RESULT', req);
+
+
     res.status(201).json(result);
   } catch (error) {
     if (error.message.toLowerCase().includes('validation failed')) {
