@@ -3,6 +3,9 @@ const app = require('./app');
 
 const { DB_HOST, PORT = 3001 } = process.env;
 
+app.get('/', (req, res) => { res.send('Hello from Express!')})
+
+
 mongoose
   .connect(DB_HOST)
   .then(() => {
@@ -13,3 +16,5 @@ mongoose
     console.log(error.message);
     process.exit(1);
   });
+
+  app.listen(PORT);
