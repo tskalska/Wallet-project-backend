@@ -3,7 +3,7 @@ const app = require('./app');
 
 const { DB_HOST, PORT = 3001 } = process.env;
 
-// app.get('/', (req, res) => { res.send('Hello from Express!')})
+app.get('/', (req, res) => { res.send('Hello from Express!')})
 
 
 mongoose
